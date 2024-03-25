@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "Clean Code",
+    "author": "Robert C. Martin",
+    "image": "https://i.ibb.co/mt7993B/clean-code.png",
+    "review": "An essential read for any programmer striving for cleaner, more maintainable code.",
+    "totalPages": 464,
+    "rating": 4.6,
+    "category": "Programming",
+    "tags": ["Software Development", "Agile"],
+    "publisher": "Prentice Hall",
+    "yearOfPublishing": 2008
+  },
+  {
+    "bookId": 2,
+    "bookName": "Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "image": "https://i.ibb.co/4WFyB8d/pragmatic-programmer.png",
+    "review": "A must-read for programmers at all levels, offering timeless advice and practical tips.",
+    "totalPages": 352,
+    "rating": 4.5,
+    "category": "Programming",
+    "tags": ["Software Engineering", "Best Practices"],
+    "publisher": "Addison-Wesley Professional",
+    "yearOfPublishing": 1999
+  },
+  {
+    "bookId": 3,
+    "bookName": "JavaScript Good Parts",
+    "author": "Douglas Crockford",
+    "image": "https://i.ibb.co/1z2GVT3/javascript-good-parts.png",
+    "review": "Provides deep insights into the best aspects of JavaScript, helping developers write cleaner and more efficient code.",
+    "totalPages": 176,
+    "rating": 4.3,
+    "category": "Programming",
+    "tags": ["Web Development", "JavaScript"],
+    "publisher": "O'Reilly Media",
+    "yearOfPublishing": 2008
+  },
+  {
+    "bookId": 4,
+    "bookName": "Design Patterns",
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "image": "https://i.ibb.co/1JDmJ82/design-patterns.png",
+    "review": "A classic reference for software developers, offering valuable insights into reusable design solutions.",
+    "totalPages": 416,
+    "rating": 4.7,
+    "category": "Programming",
+    "tags": ["Software Design", "Object-Oriented Programming"],
+    "publisher": "Addison-Wesley Professional",
+    "yearOfPublishing": 1994
+  },
+  {
+    "bookId": 5,
+    "bookName": "Effective Java",
+    "author": "Joshua Bloch",
+    "image": "https://i.ibb.co/4NwSMCx/effective-java.png",
+    "review": "Packed with practical advice and best practices, a must-have for any Java developer.",
+    "totalPages": 432,
+    "rating": 4.8,
+    "category": "Programming",
+    "tags": ["Java", "Best Practices"],
+    "publisher": "Addison-Wesley Professional",
+    "yearOfPublishing": 2001
+  },
+  {
+    "bookId": 6,
+    "bookName": "Python Crash Course",
+    "author": "Eric Matthes",
+    "image": "https://i.ibb.co/Z1dCdS7/python-crash-course.png",
+    "review": "A comprehensive yet beginner-friendly guide to learning Python programming.",
+    "totalPages": 544,
+    "rating": 4.7,
+    "category": "Programming",
+    "tags": ["Python", "Beginner"],
+    "publisher": "No Starch Press",
+    "yearOfPublishing": 2015
+  }
+]
