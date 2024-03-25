@@ -13,6 +13,7 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+        loader: () => fetch("books.json"),
       },
     ],
   },

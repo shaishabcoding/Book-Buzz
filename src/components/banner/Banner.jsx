@@ -4,12 +4,9 @@ const Banner = () => {
   return (
     <div className="hero px-3 lg:p-0 lg:mt-4 lg:mb-20 mb-8">
       <div className="hero-content flex-col lg:flex-row-reverse bg-base-200 rounded-2xl lg:px-16 lg:py-10 w-full">
-        <img
-          src="banner.png"
-          className="lg:h-96 lg:w-auto w-full rounded-lg "
-        />
+        <img src="banner.png" className="lg:h-96 lg:w-auto w-2/3 rounded-lg " />
         <div>
-          <h1 className="lg:text-5xl text-3xl font-bold mb-4 lg:mb-8 lg:flex flex-col gap-6">
+          <h1 className="lg:text-5xl text-3xl font-bold mb-4 lg:mb-8 lg:flex flex-col gap-6 font-playfair">
             <span> Explore Endless Worlds with</span>
             <span>Our Book Bazaar!</span>
           </h1>
