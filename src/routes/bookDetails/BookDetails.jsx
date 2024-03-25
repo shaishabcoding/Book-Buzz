@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { addLocalBook, hasLocalBook } from "../../utils/localBook";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -16,6 +18,24 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+  const handleWishlist = () => {
+    if (hasLocalBook("read", bookId)) {
+      toast.error("You have already read this book!");
+    } else if (hasLocalBook("wishlist", bookId)) {
+      toast.error("You have already added in wishlist this book!");
+    } else {
+      toast.success("Book added to wish list");
+      addLocalBook("wishlist", bookId);
+    }
+  };
+  const handleRead = () => {
+    if (hasLocalBook("read", bookId)) {
+      toast.error("You have already read this book!");
+    } else {
+      toast.success("Book added to read list");
+      addLocalBook("read", bookId);
+    }
+  };
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mx-4 mb-4 lg:mt-4">
       <img
@@ -77,10 +97,18 @@ const BookDetails = () => {
           </div>
         </div>
         <div className="flex flex-wrap gap-4 mt-4">
-          <a className="btn px-6 py-0 bg-white border-black">Read</a>
-          <a className="btn px-6 py-0 text-white bg-cyan-400 border-cyan-400">
+          <button
+            onClick={handleRead}
+            className="btn px-6 py-0 bg-white border-black"
+          >
+            Read
+          </button>
+          <button
+            onClick={handleWishlist}
+            className="btn px-6 py-0 text-white bg-cyan-400 border-cyan-400"
+          >
             Wishlist
-          </a>
+          </button>
         </div>
       </div>
     </div>
