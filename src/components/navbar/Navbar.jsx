@@ -51,7 +51,7 @@ const Navbar = () => {
           <a className="btn px-6 py-0 text-white bg-green-400">Sign In</a>
           <a className="btn px-6 py-0 text-white bg-cyan-400">Sign up</a>
         </div>
-        <a className="btn rounded-full text-2xl p-0 aspect-square mr-4 bg-green-400 lg:hidden">
+        <a className="btn rounded-full text-2xl p-0 aspect-square mr-2 bg-green-400 lg:hidden">
           <FaRegUserCircle />
         </a>
       </div>

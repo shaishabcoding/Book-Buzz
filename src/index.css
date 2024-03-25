@@ -14,3 +14,16 @@ body {
   background: #fff;
   @apply rounded-lg;
 }
+.book-details td {
+  padding: 0;
+  padding-bottom: 8px;
+}
+td:nth-child(2n) {
+  padding-left: 10px;
+}
+.book-details thead {
+  display: none;
+}
+.book-details * {
+  border: 0;
+}

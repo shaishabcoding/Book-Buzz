@@ -10,7 +10,7 @@ const Book = ({ book }) => {
     >
       <img
         src={image}
-        alt=""
+        alt={`image of ${bookName}`}
         className="w-full rounded-lg bg-gray-100 p-4 drop-shadow-sm"
       />
       <div className="flex flex-wrap gap-2 mt-4">

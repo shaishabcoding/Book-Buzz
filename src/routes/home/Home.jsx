@@ -1,9 +1,14 @@
-import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/banner/Banner";
 import Book from "../../components/book/Book";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  const books = useLoaderData();
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    fetch("books.json")
+      .then((res) => res.json())
+      .then((data) => setBooks(data));
+  }, []);
   return (
     <div>
       <Banner />
