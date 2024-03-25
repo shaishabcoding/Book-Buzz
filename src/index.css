@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#sidebar a.active {
+  color: #23be0a;
+  border: 1px solid #23be0a;
+  background: #fff;
+  @apply rounded-lg;
+}
