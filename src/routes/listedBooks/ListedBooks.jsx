@@ -1,7 +1,8 @@
+import { useState } from "react";
 import BookList from "../../components/selectedBooks/BookList";
 
 const ListedBooks = () => {
-  const handleSortChange = () => {};
+  const [sort, setSort] = useState("");
   return (
     <div className="lg:mt-10 mt-4 mx-3 lg:mx-0">
       <h2 className="lg:text-5xl text-3xl font-bold text-center mb-6 lg:mb-16 font-playfair bg-gray-300 rounded-lg p-6 lg:p-8">
@@ -9,11 +10,13 @@ const ListedBooks = () => {
       </h2>
       <div className="flex items-center justify-center">
         <select
-          onChange={handleSortChange}
+          onChange={(e) => setSort(e.target.value)}
           className="bg-green-400 p-4 rounded-lg  outline-none text-white"
         >
           <option hidden>Sort</option>
-          <option value="item-1">Item 1</option>
+          <option value="rating">Rating</option>
+          <option value="pages">Number of pages</option>
+          <option value="publishedYear"> Published year</option>
         </select>
       </div>
       <div role="tablist" className="tabs tabs-lifted mt-6 lg:mt-16">
@@ -30,7 +33,7 @@ const ListedBooks = () => {
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
-          <BookList mode="read" />
+          <BookList mode="read" sort={sort} />
         </div>
 
         <input
@@ -44,7 +47,7 @@ const ListedBooks = () => {
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
-          <BookList mode="wishlist" />
+          <BookList mode="wishlist" sort={sort} />
         </div>
       </div>
     </div>

@@ -6,7 +6,8 @@ import { FiUsers } from "react-icons/fi";
 import { BsFileEarmarkMedical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-const BookList = ({ mode }) => {
+const BookList = ({ mode, sort }) => {
+  sort && console.log(sort);
   const [readBookIds, setReadBookIds] = useState(getLocalBooks(mode));
   const [books, setBooks] = useState([]);
   const readBooks = books.filter((book) => readBookIds.includes(book.bookId));
@@ -107,5 +108,6 @@ const BookList = ({ mode }) => {
 };
 BookList.propTypes = {
   mode: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 export default BookList;

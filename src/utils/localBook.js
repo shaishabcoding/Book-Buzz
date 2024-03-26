@@ -17,7 +17,6 @@ const addLocalBook = (mode, id) => {
 const removeLocalBook = (mode, id) => {
   const books = getLocalBooks(mode);
   const newBooks = books.filter((book) => book !== +id);
-  console.log(books);
   localStorage.setItem(mode, JSON.stringify(newBooks));
 };
 

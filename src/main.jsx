@@ -6,6 +6,7 @@ import Root from "./routes/root/Root";
 import Home from "./routes/home/Home";
 import BookDetails from "./routes/bookDetails/BookDetails";
 import ListedBooks from "./routes/listedBooks/ListedBooks";
+import ReadBookCart from "./routes/readBookCart/ReadBookCart";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/listed-books",
         Component: ListedBooks,
+      },
+      {
+        path: "/read-pages",
+        Component: ReadBookCart,
       },
     ],
   },
