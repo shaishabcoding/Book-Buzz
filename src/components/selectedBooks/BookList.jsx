@@ -7,7 +7,6 @@ import { BsFileEarmarkMedical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 const BookList = ({ mode, sort }) => {
-  sort && console.log(sort);
   const [readBookIds, setReadBookIds] = useState(getLocalBooks(mode));
   const [books, setBooks] = useState([]);
   const readBooks = books.filter((book) => readBookIds.includes(book.bookId));
@@ -16,7 +15,8 @@ const BookList = ({ mode, sort }) => {
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
-
+  const sortedBooks = [...readBooks].sort((a, b) => b[sort] - a[sort]);
+  const newBooks = sort ? sortedBooks : readBooks;
   const handleBookRemove = (bookId) => () => {
     removeLocalBook(mode, bookId);
     setReadBookIds(getLocalBooks(mode));
@@ -24,7 +24,7 @@ const BookList = ({ mode, sort }) => {
 
   return (
     <div className="flex flex-col gap-4">
-      {readBooks.map((book, idx) => {
+      {newBooks.map((book, idx) => {
         const {
           bookId,
           bookName,

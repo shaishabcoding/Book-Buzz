@@ -15,8 +15,8 @@ const ListedBooks = () => {
         >
           <option hidden>Sort</option>
           <option value="rating">Rating</option>
-          <option value="pages">Number of pages</option>
-          <option value="publishedYear"> Published year</option>
+          <option value="totalPages">Number of pages</option>
+          <option value="yearOfPublishing"> Published year</option>
         </select>
       </div>
       <div role="tablist" className="tabs tabs-lifted mt-4 lg:mt-12">

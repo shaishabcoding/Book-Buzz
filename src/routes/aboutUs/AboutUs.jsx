@@ -6,7 +6,7 @@ function AboutUs() {
       </h2>
       <p className="text-3xl font-semibold">
         Welcome to
-        <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        <span className="ml-2 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
           Book Buzz
         </span>
         !
