@@ -14,5 +14,11 @@ const addLocalBook = (mode, id) => {
   books.push(+id);
   localStorage.setItem(mode, JSON.stringify([...new Set(books)]));
 };
+const removeLocalBook = (mode, id) => {
+  const books = getLocalBooks(mode);
+  const newBooks = books.filter((book) => book !== +id);
+  console.log(books);
+  localStorage.setItem(mode, JSON.stringify(newBooks));
+};
 
-export { getLocalBooks, addLocalBook, hasLocalBook };
+export { getLocalBooks, addLocalBook, hasLocalBook, removeLocalBook };
