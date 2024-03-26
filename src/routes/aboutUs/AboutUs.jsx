@@ -5,7 +5,7 @@ function AboutUs() {
         About Us
       </h2>
       <p className="text-3xl font-semibold">
-        Welcome to{" "}
+        Welcome to
         <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
           Book Buzz
         </span>

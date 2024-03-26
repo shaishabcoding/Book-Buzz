@@ -35,7 +35,7 @@ const ReadBookCart = () => {
       .then((data) => setBooks(data));
   }, []);
   return (
-    <div className="bg-gray-50 rounded-lg py-16 px-6 flex items-center justify-center overflow-hidden drop-shadow-sm m-4 lg:mx-0">
+    <div className="bg-gray-50 rounded-lg py-16 px-6 flex items-center justify-center overflow-hidden drop-shadow-sm m-4 lg:mx-0 mb-4 lg:mb-16">
       <BarChart
         width={1300}
         height={300}

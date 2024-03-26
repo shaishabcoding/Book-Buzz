@@ -37,7 +37,7 @@ const BookDetails = () => {
     }
   };
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mx-4 mb-4 lg:mt-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mx-4 mb-6 lg:mt-4 lg:mb-16">
       <img
         src={image}
         alt={`image of ${bookName}`}

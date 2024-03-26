@@ -8,8 +8,8 @@ const Banner = () => {
         <div>
           <h1 className="lg:text-5xl text-3xl font-bold mb-4 lg:mb-8 lg:flex flex-col gap-6 font-playfair">
             <span> Explore Endless Worlds with</span>
-            <span>
-              Our{" "}
+            <span className="flex gap-2 mr-2 lg:mr-0">
+              Our
               <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
                 Book Bazaar
               </span>
