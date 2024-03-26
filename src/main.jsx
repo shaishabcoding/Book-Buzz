@@ -7,11 +7,13 @@ import Home from "./routes/home/Home";
 import BookDetails from "./routes/bookDetails/BookDetails";
 import ListedBooks from "./routes/listedBooks/ListedBooks";
 import ReadBookCart from "./routes/readBookCart/ReadBookCart";
+import Error from "./routes/404/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error />,
     children: [
       {
         index: true,
