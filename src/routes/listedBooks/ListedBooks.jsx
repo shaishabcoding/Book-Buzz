@@ -4,8 +4,8 @@ import BookList from "../../components/selectedBooks/BookList";
 const ListedBooks = () => {
   const [sort, setSort] = useState("");
   return (
-    <div className="lg:mt-10 mt-4 mx-3 lg:mx-0">
-      <h2 className="lg:text-5xl text-3xl font-bold text-center mb-6 lg:mb-16 font-playfair bg-gray-300 rounded-lg p-6 lg:p-8">
+    <div className="lg:mt-6 mt-4 mx-3 lg:mx-0">
+      <h2 className="lg:text-5xl text-3xl font-bold text-center mb-4 lg:mb-6 font-playfair bg-gray-300 rounded-lg p-6 lg:p-8">
         Books
       </h2>
       <div className="flex items-center justify-center">
@@ -19,7 +19,7 @@ const ListedBooks = () => {
           <option value="publishedYear"> Published year</option>
         </select>
       </div>
-      <div role="tablist" className="tabs tabs-lifted mt-6 lg:mt-16">
+      <div role="tablist" className="tabs tabs-lifted mt-4 lg:mt-12">
         <input
           type="radio"
           name="tab"

@@ -8,6 +8,8 @@ import BookDetails from "./routes/bookDetails/BookDetails";
 import ListedBooks from "./routes/listedBooks/ListedBooks";
 import ReadBookCart from "./routes/readBookCart/ReadBookCart";
 import Error from "./routes/404/Error";
+import Faq from "./routes/faq/Faq";
+import AboutUs from "./routes/aboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,15 @@ const router = createBrowserRouter([
       {
         path: "/read-pages",
         Component: ReadBookCart,
+      },
+      {
+        path: "/faq",
+        loader: () => fetch("../faq.json"),
+        Component: Faq,
+      },
+      {
+        path: "/about-us",
+        Component: AboutUs,
       },
     ],
   },

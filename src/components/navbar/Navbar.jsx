@@ -12,6 +12,12 @@ const Navbar = () => {
       <li>
         <NavLink to="/read-pages">Pages to Read</NavLink>
       </li>
+      <li>
+        <NavLink to="/faq">FAQ</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about-us">About Us</NavLink>
+      </li>
     </>
   );
   return (
@@ -41,7 +47,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Book Buzz</a>
+        <a className="btn btn-ghost text-xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+          Book Buzz
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-semibold">{links}</ul>

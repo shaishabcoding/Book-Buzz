@@ -19,17 +19,16 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 TriangleBar.propTypes = {
-  fill: PropTypes.string.isRequired,
-  x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  fill: PropTypes.string,
+  x: PropTypes.number,
+  y: PropTypes.number,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 const ReadBookCart = () => {
   const [readBookIds] = useState(getLocalBooks("read"));
   const [books, setBooks] = useState([]);
   const readBooks = books.filter((book) => readBookIds.includes(book.bookId));
-  console.log(readBooks);
   useEffect(() => {
     fetch("books.json")
       .then((res) => res.json())
