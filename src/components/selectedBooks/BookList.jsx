@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { getLocalBooks, removeLocalBook } from "../../utils/localBook";
-import { useEffect } from "react";
+import { BooksContext } from "../../routes/root/Root";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiUsers } from "react-icons/fi";
 import { BsFileEarmarkMedical } from "react-icons/bs";
@@ -8,14 +8,11 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 const BookList = ({ mode, sort }) => {
   const [readBookIds, setReadBookIds] = useState(getLocalBooks(mode));
-  const [books, setBooks] = useState([]);
+  const books = useContext(BooksContext);
   const readBooks = books.filter((book) => readBookIds.includes(book.bookId));
-  useEffect(() => {
-    fetch("books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
-  const sortedBooks = [...readBooks].sort((a, b) => b[sort] - a[sort]);
+  const sortedBooks = [...readBooks].sort((a, b) =>
+    sort === "bookName" ? b[sort].localeCompare(a[sort]) : b[sort] - a[sort]
+  );
   const newBooks = sort ? sortedBooks : readBooks;
   const handleBookRemove = (bookId) => () => {
     removeLocalBook(mode, bookId);

@@ -15,6 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    loader: () => fetch("../books.json"),
     errorElement: <Error />,
     children: [
       {
@@ -24,7 +25,6 @@ const router = createBrowserRouter([
       {
         path: "/book/:bookId",
         Component: BookDetails,
-        loader: () => fetch("../books.json"),
       },
       {
         path: "/listed-books",

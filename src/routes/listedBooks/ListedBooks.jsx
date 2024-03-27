@@ -5,9 +5,11 @@ const ListedBooks = () => {
   const [sort, setSort] = useState("");
   return (
     <div className="lg:mt-6 mt-4 mx-3 lg:mx-0 lg:mb-16 mb-4">
-      <h2 className="lg:text-5xl text-3xl font-bold text-center mb-4 lg:mb-6 font-playfair bg-gray-300 rounded-lg p-6 lg:p-8">
-        Books
-      </h2>
+      <header>
+        <h2 className="lg:text-5xl text-3xl font-bold text-center mb-4 lg:mb-6 font-playfair bg-gray-300 rounded-lg p-6 lg:p-8">
+          Listed Books
+        </h2>
+      </header>
       <div className="flex items-center justify-center">
         <select
           onChange={(e) => setSort(e.target.value)}
@@ -16,7 +18,9 @@ const ListedBooks = () => {
           <option hidden>Sort</option>
           <option value="rating">Rating</option>
           <option value="totalPages">Number of pages</option>
-          <option value="yearOfPublishing"> Published year</option>
+          <option value="yearOfPublishing">Published year</option>
+          <option value="bookName">Name</option>
+          <option value="bookId">Book Id</option>
         </select>
       </div>
       <div role="tablist" className="tabs tabs-lifted mt-4 lg:mt-12">

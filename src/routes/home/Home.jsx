@@ -1,14 +1,10 @@
+import { useContext } from "react";
 import Banner from "../../components/banner/Banner";
 import Book from "../../components/book/Book";
-import { useEffect, useState } from "react";
+import { BooksContext } from "../root/Root";
 
 const Home = () => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    fetch("books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+  const books = useContext(BooksContext);
   return (
     <div>
       <Banner />

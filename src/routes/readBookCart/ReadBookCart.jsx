@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { getLocalBooks } from "../../utils/localBook";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import PropTypes from "prop-types";
+import { BooksContext } from "../../routes/root/Root";
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
@@ -27,13 +28,8 @@ TriangleBar.propTypes = {
 };
 const ReadBookCart = () => {
   const [readBookIds] = useState(getLocalBooks("read"));
-  const [books, setBooks] = useState([]);
+  const books = useContext(BooksContext);
   const readBooks = books.filter((book) => readBookIds.includes(book.bookId));
-  useEffect(() => {
-    fetch("books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
   return (
     <div className="bg-gray-50 rounded-lg py-16 px-6 flex items-center justify-center overflow-hidden drop-shadow-sm m-4 lg:mx-0 mb-4 lg:mb-16">
       <BarChart

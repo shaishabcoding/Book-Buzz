@@ -1,9 +1,11 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { addLocalBook, hasLocalBook } from "../../utils/localBook";
+import { useContext } from "react";
+import { BooksContext } from "../../routes/root/Root";
 
 const BookDetails = () => {
-  const books = useLoaderData();
+  const books = useContext(BooksContext);
   const { bookId } = useParams();
   const book = books.find((book) => book.bookId === +bookId);
   const {
