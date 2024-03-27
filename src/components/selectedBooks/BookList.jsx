@@ -6,6 +6,10 @@ import { FiUsers } from "react-icons/fi";
 import { BsFileEarmarkMedical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { TbListDetails, TbCategory2 } from "react-icons/tb";
+import { AiOutlineStar } from "react-icons/ai";
+
 const BookList = ({ mode, sort }) => {
   const [readBookIds, setReadBookIds] = useState(getLocalBooks(mode));
   const books = useContext(BooksContext);
@@ -77,23 +81,23 @@ const BookList = ({ mode, sort }) => {
                 </span>
               </div>
               <div className="border-t border-dashed border-gray-300 mt-3 pt-2 flex flex-wrap lg:gap-3 gap-2 text-xs">
-                <span className="px-4 py-1 bg-blue-100 text-blue-500 font-semibold  rounded-full">
-                  Category : {category}
+                <span className="px-4 py-1 bg-blue-100 text-blue-500 font-semibold  rounded-full flex items-center justify-center gap-1">
+                  Category : {category} <TbCategory2 />
                 </span>
-                <span className="px-4 py-1 bg-yellow-100 text-yellow-500 font-semibold  rounded-full">
-                  Rating : {rating}
+                <span className="px-4 py-1 bg-yellow-100 text-yellow-500 font-semibold  rounded-full flex items-center justify-center gap-1">
+                  Rating : {rating} <AiOutlineStar />
                 </span>
                 <Link
                   to={`/book/${bookId}`}
-                  className="px-4 py-1 bg-green-400 text-white font-semibold  rounded-full hover:bg-green-200 transition hover:text-green-400"
+                  className="px-4 py-1 bg-green-400 text-white font-semibold  rounded-full hover:bg-green-200 transition hover:text-green-400 flex items-center justify-center gap-1"
                 >
-                  View Details
+                  View Details <TbListDetails />
                 </Link>
                 <button
                   onClick={handleBookRemove(bookId)}
-                  className="px-4 py-1 bg-red-400 text-white font-semibold  rounded-full hover:bg-red-200 transition hover:text-red-400"
+                  className="px-4 py-1 bg-red-400 text-white font-semibold  rounded-full hover:bg-red-200 transition hover:text-red-400 flex items-center justify-center gap-1"
                 >
-                  Remove
+                  Remove <RiDeleteBin6Line />
                 </button>
               </div>
             </div>

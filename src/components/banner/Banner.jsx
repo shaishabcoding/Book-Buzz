@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Banner = () => {
   return (
@@ -20,7 +21,7 @@ const Banner = () => {
             to="/listed-books"
             className="btn px-6 py-0 text-white bg-green-400"
           >
-            View The List
+            View The List <AiOutlineArrowRight />
           </Link>
         </div>
       </div>

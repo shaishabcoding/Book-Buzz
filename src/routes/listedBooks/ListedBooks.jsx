@@ -3,6 +3,10 @@ import BookList from "../../components/selectedBooks/BookList";
 
 const ListedBooks = () => {
   const [sort, setSort] = useState("");
+  const [checkedTab, setCheckedTab] = useState("read");
+  const handleTabChange = (event) => {
+    setCheckedTab(event.target.value);
+  };
   return (
     <div className="lg:mt-6 mt-4 mx-3 lg:mx-0 lg:mb-16 mb-4">
       <header>
@@ -28,9 +32,11 @@ const ListedBooks = () => {
           type="radio"
           name="tab"
           role="tab"
+          value="read"
           className="tab text-nowrap"
           aria-label="Read Books"
-          checked
+          checked={checkedTab === "read"}
+          onChange={handleTabChange}
           readOnly
         />
         <div
@@ -44,8 +50,11 @@ const ListedBooks = () => {
           type="radio"
           name="tab"
           role="tab"
+          value="wishlist"
           className="tab text-nowrap"
           aria-label="Wishlist Books"
+          onChange={handleTabChange}
+          checked={checkedTab === "wishlist"}
         />
         <div
           role="tabpanel"

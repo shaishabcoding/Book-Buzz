@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BsArrowReturnRight } from "react-icons/bs";
 
 const Error = () => {
   return (
@@ -13,7 +14,7 @@ const Error = () => {
           unavailable
         </p>
         <Link to="/" className="btn bg-sky-300">
-          Back to homepage
+          Back to homepage <BsArrowReturnRight />
         </Link>
       </div>
     </div>

@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 import { addLocalBook, hasLocalBook } from "../../utils/localBook";
 import { useContext } from "react";
 import { BooksContext } from "../../routes/root/Root";
+import { AiOutlineRead } from "react-icons/ai";
+import { MdFavorite } from "react-icons/md";
 
 const BookDetails = () => {
   const books = useContext(BooksContext);
@@ -40,11 +42,13 @@ const BookDetails = () => {
   };
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mx-4 mb-6 lg:mt-4 lg:mb-16">
-      <img
-        src={image}
-        alt={`image of ${bookName}`}
-        className="bg-gray-300 rounded-lg p-3 h-full"
-      />
+      <div className="bg-gray-300 rounded-lg p-3 h-full overflow-hidden">
+        <img
+          src={image}
+          alt={`image of ${bookName}`}
+          className="h-full hover:scale-110 transition hover:saturate-150"
+        />
+      </div>
       <div>
         <h2 className="font-playfair text-2xl lg:text-4xl font-bold">
           {bookName}
@@ -103,13 +107,13 @@ const BookDetails = () => {
             onClick={handleRead}
             className="btn px-6 py-0 bg-white border-black"
           >
-            Read
+            Read <AiOutlineRead />
           </button>
           <button
             onClick={handleWishlist}
             className="btn px-6 py-0 text-white bg-cyan-400 border-cyan-400"
           >
-            Wishlist
+            Wishlist <MdFavorite />
           </button>
         </div>
       </div>
